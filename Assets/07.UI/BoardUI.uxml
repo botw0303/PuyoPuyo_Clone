@@ -1,0 +1,62 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/07.UI/BoardUI.uss?fileID=7433441132597879392&amp;guid=b2487038d2b70ef4fb88ab736983ea7e&amp;type=3#BoardUI" />
+    <ui:VisualElement name="content-container" style="flex-grow: 1; flex-direction: row; background-image: resource(&apos;Background/PuyoBackground&apos;);">
+        <ui:VisualElement name="player1-board" style="justify-content: center; align-items: center; width: 50%;">
+            <ui:VisualElement name="board-field" style="width: 51.5%; justify-content: center; align-items: center; flex-direction: row; margin-bottom: 5%;">
+                <ui:VisualElement name="field" style="height: 700px; background-image: resource(&apos;BoardBackground/field_wch&apos;); width: 400px; justify-content: space-between; align-items: center;" />
+                <ui:VisualElement name="field-background" style="width: 400px; height: 120%; position: absolute; justify-content: space-around;">
+                    <ui:VisualElement name="top" style="flex-grow: 1; height: 70%;">
+                        <ui:VisualElement name="header" style="height: 13.1%; background-image: resource(&apos;Player1Header&apos;);" />
+                        <ui:VisualElement name="side" style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
+                            <ui:VisualElement name="left-side" style="width: 5%; background-image: resource(&apos;Player1 Left Side (1)&apos;);" />
+                            <ui:VisualElement name="right-side" style="width: 5.2%; background-image: resource(&apos;Player1 Right Side (1)&apos;);" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="bottom" style="flex-grow: 1; background-image: resource(&apos;Player1 Bottom&apos;); height: 40%;" />
+                    <ui:VisualElement name="player1-score" style="flex-grow: 1; position: absolute; top: 92.5%; width: 70%; height: 7.5%; left: 25%;">
+                        <ui:Label tabindex="-1" text="00000000" parse-escape-sequences="true" display-tooltip-when-elided="true" name="player1-score-text" style="width: 100%; height: 100%; -unity-font-style: bold; -unity-text-align: middle-right; font-size: 70px; color: rgb(255, 255, 255); -unity-text-outline-width: 3px; -unity-text-outline-color: rgb(84, 84, 84); text-shadow: 5px 4px 0 rgb(84, 84, 84); -unity-font-definition: url(&apos;project://database/Assets/09.Fonts/Calibri_Bold%20SDF.asset?fileID=11400000&amp;guid=586891b5492b44e4fa25a07f4c3c8337&amp;type=2#Calibri_Bold SDF&apos;);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="player1-namebox" style="flex-grow: 1; position: absolute; top: 89%; height: 60px; width: 525px; background-image: resource(&apos;Player1 Name&apos;); justify-content: center; align-items: center;">
+                <ui:Label tabindex="-1" text="Player1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="player1-nametext" style="width: 100%; height: 100%; -unity-text-align: middle-center; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 40px; -unity-font-definition: url(&apos;project://database/Assets/09.Fonts/Calibri_Bold%20SDF.asset?fileID=11400000&amp;guid=586891b5492b44e4fa25a07f4c3c8337&amp;type=2#Calibri_Bold SDF&apos;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="player1-next-puyo" style="position: absolute; background-image: resource(&apos;Player1 Next Puyo&apos;); width: 134px; height: 285px; top: 13%; left: 72%; scale: -1 1;">
+                <ui:VisualElement name="player1-next-border" style="background-image: resource(&apos;Player2 Next Puyo Border&apos;); width: 100%; height: 100%; scale: -1 1; left: 1%;" />
+                <ui:VisualElement name="player1-next-puyo-contents" style="width: 100%; height: 100%; position: absolute;">
+                    <ui:VisualElement name="player1-next-puyo1" style="width: 100px; height: 100px;" />
+                    <ui:VisualElement name="player1-next-puyo2" style="width: 100px; height: 100px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="player1-next-puyo-contents" style="width: 100%; height: 100%; position: absolute;">
+                    <ui:VisualElement name="player1-next-puyo1" style="width: 100px; height: 100px;" />
+                    <ui:VisualElement name="player1-next-puyo2" style="width: 100px; height: 100px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="player2-board" style="justify-content: center; align-items: center; width: 50%;">
+            <ui:VisualElement name="board-field" style="width: 51.5%; justify-content: center; align-items: center; flex-direction: row; margin-bottom: 5%;">
+                <ui:VisualElement name="field" style="height: 700px; background-image: resource(&apos;BoardBackground/field_arl&apos;); width: 400px; justify-content: space-between; align-items: center; flex-basis: 400px;" />
+                <ui:VisualElement name="field-background" style="width: 400px; height: 120%; position: absolute; justify-content: space-around;">
+                    <ui:VisualElement name="top" style="flex-grow: 1; height: 70%;">
+                        <ui:VisualElement name="header" style="height: 13.1%; background-image: resource(&apos;Player2 Header&apos;);" />
+                        <ui:VisualElement name="side" style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
+                            <ui:VisualElement name="left-side" style="width: 5.4%; background-image: resource(&apos;Player2 Left Side (1)&apos;);" />
+                            <ui:VisualElement name="right-side" style="width: 5%; background-image: resource(&apos;Player2 Right Side (1)&apos;);" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="bottom" style="flex-grow: 1; background-image: resource(&apos;Player2 Bottom&apos;); height: 40%; scale: -1 1;" />
+                    <ui:VisualElement name="player2-score" style="flex-grow: 1; position: absolute; top: 92.5%; width: 70%; height: 7.5%; right: 25%;">
+                        <ui:Label tabindex="-1" text="00000000" parse-escape-sequences="true" display-tooltip-when-elided="true" name="player2-score-text" style="width: 100%; height: 100%; -unity-font-style: bold; -unity-text-align: middle-left; font-size: 70px; color: rgb(255, 255, 255); -unity-text-outline-width: 3px; -unity-text-outline-color: rgb(84, 84, 84); text-shadow: 5px 4px 0 rgb(84, 84, 84); -unity-font-definition: url(&apos;project://database/Assets/09.Fonts/Calibri_Bold%20SDF.asset?fileID=11400000&amp;guid=586891b5492b44e4fa25a07f4c3c8337&amp;type=2#Calibri_Bold SDF&apos;);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="player2-namebox" style="flex-grow: 1; position: absolute; top: 89%; height: 60px; width: 525px; background-image: resource(&apos;Player2 Name&apos;); justify-content: center; align-items: center;">
+                <ui:Label tabindex="-1" text="Player2" parse-escape-sequences="true" display-tooltip-when-elided="true" name="player2-nametext" style="width: 100%; height: 100%; -unity-text-align: middle-center; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 40px; -unity-font-definition: url(&apos;project://database/Assets/09.Fonts/Calibri_Bold%20SDF.asset?fileID=11400000&amp;guid=586891b5492b44e4fa25a07f4c3c8337&amp;type=2#Calibri_Bold SDF&apos;);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="matchpoint-panel" style="position: absolute; background-image: resource(&apos;Wins&apos;); width: 400px; height: 80px; transform-origin: center; top: 88%; left: 39.5%; flex-direction: row; align-items: center; justify-content: space-around;">
+            <ui:VisualElement name="player1-star" style="width: 50px; height: 50px; background-image: resource(&apos;LoseStar&apos;); right: 10px;" />
+            <ui:VisualElement name="player2-star" style="width: 50px; height: 50px; background-image: resource(&apos;LoseStar&apos;); left: 10px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
