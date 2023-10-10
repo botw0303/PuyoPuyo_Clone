@@ -23,13 +23,12 @@
             </ui:VisualElement>
             <ui:VisualElement name="player1-next-puyo" style="position: absolute; background-image: resource(&apos;Player1 Next Puyo&apos;); width: 134px; height: 285px; top: 13%; left: 72%; scale: -1 1;">
                 <ui:VisualElement name="player1-next-border" style="background-image: resource(&apos;Player2 Next Puyo Border&apos;); width: 100%; height: 100%; scale: -1 1; left: 1%;" />
-                <ui:VisualElement name="player1-next-puyo-contents" style="width: 100%; height: 100%; position: absolute;">
-                    <ui:VisualElement name="player1-next-puyo1" style="width: 100px; height: 100px;" />
-                    <ui:VisualElement name="player1-next-puyo2" style="width: 100px; height: 100px;" />
-                </ui:VisualElement>
-                <ui:VisualElement name="player1-next-puyo-contents" style="width: 100%; height: 100%; position: absolute;">
-                    <ui:VisualElement name="player1-next-puyo1" style="width: 100px; height: 100px;" />
-                    <ui:VisualElement name="player1-next-puyo2" style="width: 100px; height: 100px;" />
+                <ui:VisualElement name="player1-next-puyo-contents" style="width: 100%; height: 100%; position: absolute; justify-content: space-between; align-items: flex-end;">
+                    <ui:VisualElement name="player1-next-puyopuyo1" style="width: 70px; height: 125px; right: 9%; top: 11%;">
+                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%;" />
+                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="player1-next-puyopuyo2" style="width: 75px; height: 150px; right: 38%;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
