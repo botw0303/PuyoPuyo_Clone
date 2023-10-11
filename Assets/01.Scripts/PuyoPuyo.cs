@@ -34,9 +34,22 @@ public class PuyoPuyo : MonoBehaviour
     //낙하
     public void Fall()
     {
-        _puyopuyo[0].FallOneBlock();
-        _puyopuyo[1].FallOneBlock();
-        GameManager.Instance.GetBoard(1).BoardRender();
+        if(_puyopuyo[0].PosY < 11 || _puyopuyo[1].PosY < 11)
+        {
+            _puyopuyo[0].FallOneBlock();
+            _puyopuyo[1].FallOneBlock();
+            GameManager.Instance.GetBoard(1).BoardRender();
+        }
+        else
+        {
+            IsLanding = true;
+            _puyopuyo[0].Fall();
+            _puyopuyo[1].Fall();
+            GameManager.Instance.GetBoard(1).NextPuyoList.RemoveAt(0);
+            GameManager.Instance.GetBoard(1).CurPuyoPuyo = null;
+            GameManager.Instance.GetBoard(1).CurPuyoPuyo = GameManager.Instance.GetBoard(1).NextPuyoList[0];
+            GameManager.Instance.GetBoard(1).BoardRender();
+        }
     }
 
     //매개변수의 값에 따라 회전
