@@ -86,6 +86,8 @@ public class Board : MonoBehaviour
                 }
             }
 
+            //점수 구하는 거 하는 도중이었음(지금은 연쇄 보너스 작업 중)
+
             for(int i = 0; i < PuyoList.Count; ++i)
             {
                 PuyoList[i].Fall();
