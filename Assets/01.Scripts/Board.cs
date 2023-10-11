@@ -7,6 +7,9 @@ public class Board : MonoBehaviour
 {
     //현재 보드에 있는 뿌요 리스트
     public List<Puyo> PuyoList;
+
+    //다음 뿌요뿌요 대기 리스트
+    public List<PuyoPuyo> NextPuyoList;
     
     /// <summary>
     /// 현재 보드 배치
@@ -29,6 +32,11 @@ public class Board : MonoBehaviour
     public float fallSpeed = 0.5f;
 
     private bool _isCalc = false;
+
+    public int PopPuyoCnt = 0;
+    public int ChainBonus = 0;
+    public int ConnectBonus = 0;
+    public List<PuyoType> ColorBonus = new List<PuyoType>();
 
     private void Awake()
     {
@@ -72,13 +80,28 @@ public class Board : MonoBehaviour
             {
                 if (PuyoList[i].IsPop)
                 {
+                    ChainBonus++;
                     _isCalc = true;
                     PuyoList[i].Pop();
                     PuyoList.RemoveAt(i);
                 }
             }
 
-
+            /*
+            아래로 한칸씩 떨어지고
+            좌우로 움직일 수 있고
+            떨어지는 거 가속할 수 있고
+            회전시킬 수 있고
+            착지하면 주변 확인해서 터짐
+            
+            다 떨어지면 아래로 더 갈 수 있는지 확인하고 떨어져야하면 떨어지게 해야함
+            한번 터트리고 뿌요 다 떨어지게하고 다시 확인해서 터트릴 거 있는지 확인해야함
+            터진 수, 연쇄 수 등에 따라서 점수 줘야함
+            점수에 따라서 상대한테 방해뿌요 떨궈줘야함
+            뿌요, 점수, 승점, 다음 뿌요 렌더링
+            패배 조건 체크해줘야함
+            연출(이펙트, 사운드)
+             */
         }
     }
 

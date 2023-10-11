@@ -57,5 +57,6 @@ public class PuyoPuyo : MonoBehaviour
     public void DeSub()
     {
         _inputReader.OnRotateKeyPress -= Rotate;
+        GameManager.Instance.GetBoard(1).NextPuyoList.RemoveAt(0);
     }
 }

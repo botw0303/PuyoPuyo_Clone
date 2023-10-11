@@ -73,23 +73,17 @@ public class Puyo : MonoBehaviour
             }
         }
         GameManager.Instance.GetBoard(1).BoardRender();
-        GameManager.Instance.GetBoard(1).CurPuyoPuyo.DeSub();
     }
 
     //¾Æ·¡·Î 1Ä­ ³«ÇÏ
     public void FallOneBlock()
     {
-        if(GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY - 1].Type == PuyoType.None
+        if(GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY + 1].Type == PuyoType.None
             && _posY < 11)
         {
             GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY] = new Puyo();
             ++_posY;
             GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY] = this;
-        }
-        else
-        {
-            GameManager.Instance.GetBoard(1).CurPuyoPuyo.IsLanding = true;
-            
         }
     }
 
@@ -142,5 +136,10 @@ public class Puyo : MonoBehaviour
         Visited = false;
         IsPop = false;
         _type = PuyoType.None;
+        GameManager.Instance.GetBoard(1).PopPuyoCnt++;
+        if (!(GameManager.Instance.GetBoard(1).ColorBonus.Contains(this._type)))
+        {
+            GameManager.Instance.GetBoard(1).ColorBonus.Add(this._type);
+        }
     }
 }
