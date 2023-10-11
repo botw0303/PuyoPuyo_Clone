@@ -16,6 +16,7 @@ public class Board : MonoBehaviour
     /// </summary>
     public Puyo[,] PuyoBoard = new Puyo[6, 12];
 
+    //UI
     [SerializeField]
     private VisualTreeAsset _treeAsset;
     private VisualElement _root;
@@ -27,6 +28,8 @@ public class Board : MonoBehaviour
     public float interval = 0f;
     public float fallSpeed = 0.5f;
 
+    private bool _isCalc = false;
+
     private void Awake()
     {
         _root = _treeAsset.Instantiate();
@@ -36,9 +39,15 @@ public class Board : MonoBehaviour
 
     public void Update()
     {
-        if(interval > fallSpeed)
+        UpdateBoard();
+    }
+
+    private void UpdateBoard()
+    {
+        if (interval > fallSpeed)
         {
             CurPuyoPuyo.Fall();
+            FindSamePuyo();
             BoardRender();
             interval = 0f;
         }
@@ -50,7 +59,27 @@ public class Board : MonoBehaviour
 
     public void FindSamePuyo()
     {
+        while (_isCalc)
+        {
+            PuyoList.ForEach(puyo =>
+            {
+                puyo.DFS(puyo.PosX, puyo.PosY);
+            });
 
+            _isCalc = false;
+
+            for(int i = 0; i < PuyoList.Count; ++i)
+            {
+                if (PuyoList[i].IsPop)
+                {
+                    _isCalc = true;
+                    PuyoList[i].Pop();
+                    PuyoList.RemoveAt(i);
+                }
+            }
+
+
+        }
     }
 
     public void BoardRender()

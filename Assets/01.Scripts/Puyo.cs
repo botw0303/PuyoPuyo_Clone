@@ -16,10 +16,8 @@ public class Puyo : MonoBehaviour
     private int _posY;
     public int PosY => _posY;
 
-    public int MinPosX;
-    public int MaxPosX;
-    public int MinPosY;
-    public int MaxPosY;
+    public bool Visited = false;
+    public bool IsPop = false;
 
     //현재 내 회전 값
     public int RotateVal = 0;
@@ -115,5 +113,34 @@ public class Puyo : MonoBehaviour
         {
             RotateVal = (RotateVal + dir) % 4;
         }
+    }
+
+    public void DFS(int x, int y)
+    {
+        GameManager.Instance.GetBoard(1).PuyoBoard[x, y].Visited = true;
+
+        for(int i = 0; i < 4; ++i)
+        {
+            int nx = x + _rotateVals[i].Item1;
+            int ny = y + _rotateVals[i].Item2;
+
+            if (nx < 0 || nx >= 6 || ny < 0 || ny >= 12)
+                continue;
+            if (GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny].Type == PuyoType.None)
+                continue;
+            if (GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny].Visited
+                || GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny].Type != this._type)
+                continue;
+
+            DFS(nx, ny);
+            IsPop = true;
+        }
+    }
+
+    public void Pop()
+    {
+        Visited = false;
+        IsPop = false;
+        _type = PuyoType.None;
     }
 }

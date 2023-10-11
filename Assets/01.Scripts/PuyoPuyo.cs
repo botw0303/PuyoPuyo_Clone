@@ -17,7 +17,7 @@ public class PuyoPuyo : MonoBehaviour
 
     private void Awake()
     {
-        _inputReader = GameObject.Find("Player1 Board").GetComponent<InputReader>();
+        _inputReader = GameObject.Find("Player1").GetComponent<InputReader>();
 
         //시작 위치 세팅
         _puyopuyo[0].Init((PuyoType)Random.Range(1, 6), 2, 0);
