@@ -9,6 +9,14 @@ public class InputReader : MonoBehaviour
 
     private void Update()
     {
+        //Test Key
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("isClicked Q");
+            PuyoPuyo newPuyoPuyo = new PuyoPuyo();
+            GameManager.Instance.GetBoard(1).CurPuyoPuyo = newPuyoPuyo;
+        }
+
         //왼쪽 화살표를 누르는 동안 - 왼쪽으로 이동
         if (Input.GetKey(KeyCode.LeftArrow))
             GameManager.Instance.GetBoard(1).CurPuyoPuyo.Move(-1);

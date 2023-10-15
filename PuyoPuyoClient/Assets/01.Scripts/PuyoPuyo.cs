@@ -20,8 +20,12 @@ public class PuyoPuyo : MonoBehaviour
         _inputReader = GameObject.Find("Player1").GetComponent<InputReader>();
 
         //시작 위치 세팅
-        _puyopuyo[0].Init((PuyoType)Random.Range(1, 6), 2, 0);
-        _puyopuyo[1].Init((PuyoType)Random.Range(1, 6), 2, 1);
+        Puyo newPuyo1 = new Puyo();
+        newPuyo1.Init((PuyoType)Random.Range(1, 6), 2, 0);
+        Puyo newPuyo2 = new Puyo();
+        newPuyo2.Init((PuyoType)Random.Range(1, 6), 2, 1);
+        _puyopuyo[0] = newPuyo1;
+        _puyopuyo[1] = newPuyo2;
 
         //뿌요 리스트에 추가
         GameManager.Instance.GetBoard(1).PuyoList.Add(_puyopuyo[0]);

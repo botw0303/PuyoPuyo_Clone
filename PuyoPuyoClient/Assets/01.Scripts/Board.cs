@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class Board : MonoBehaviour
 {
     //현재 보드에 있는 뿌요 리스트
-    public List<Puyo> PuyoList;
+    public List<Puyo> PuyoList = new List<Puyo>();
 
     //다음 뿌요뿌요 대기 리스트
     public List<PuyoPuyo> NextPuyoList;
@@ -38,11 +38,23 @@ public class Board : MonoBehaviour
     public int ConnectBonus = 0;
     public List<PuyoType> ColorBonus = new List<PuyoType>();
 
+    public bool IsGameOver = false;
+
     private void Awake()
     {
+        for(int i = 0; i < 6; ++i)
+        {
+            for(int j = 0; j < 12; ++j)
+            {
+                PuyoBoard[i, j] = new Puyo();
+                PuyoBoard[i, j].Init(PuyoType.None, i, j);
+            }
+        }
+
         _root = _treeAsset.Instantiate();
         _root = _root.Q<VisualElement>("player1-board");
         FindElements();
+        BoardRender();
     }
 
     public void Update()
@@ -54,7 +66,8 @@ public class Board : MonoBehaviour
     {
         if (interval > fallSpeed)
         {
-            CurPuyoPuyo.Fall();
+            if(CurPuyoPuyo != null)
+                CurPuyoPuyo.Fall();
             FindSamePuyo();
             BoardRender();
             interval = 0f;
@@ -120,7 +133,8 @@ public class Board : MonoBehaviour
         {
             for(int j = 0; j < 12; ++j)
             {
-                RenderBoard[i, j].style.backgroundImage = new StyleBackground(Resources.Load<Sprite>($"{PuyoBoard[i, j].Type} Puyo (S)"));
+                Debug.Log(Resources.Load<Sprite>($"Puyo Resources/{PuyoBoard[i, j].Type} Puyo (S)") == null);
+                RenderBoard[i, j].style.backgroundImage = new StyleBackground(Resources.Load<Sprite>($"Puyo Resources/{PuyoBoard[i, j].Type} Puyo (S).asset"));
             }
         }
     }
