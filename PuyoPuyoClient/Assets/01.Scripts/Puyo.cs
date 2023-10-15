@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puyo : MonoBehaviour
+public class Puyo
 {
     //자신이 어떤 뿌요인지 나타내는 타입
     private PuyoType _type = PuyoType.None;

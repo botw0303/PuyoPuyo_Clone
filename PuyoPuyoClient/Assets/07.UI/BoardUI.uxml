@@ -18,78 +18,78 @@
                     </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="puyos" style="flex-grow: 1; position: absolute; width: 360px; height: 660px; align-items: center; flex-wrap: wrap; flex-direction: row;">
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" style="background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="player1-namebox" style="flex-grow: 1; position: absolute; top: 89%; height: 60px; width: 525px; background-image: resource(&apos;Player1 Name&apos;); justify-content: center; align-items: center;">
@@ -99,11 +99,11 @@
                 <ui:VisualElement name="player1-next-border" style="background-image: resource(&apos;Player2 Next Puyo Border&apos;); width: 100%; height: 100%; scale: -1 1; left: 1%;" />
                 <ui:VisualElement name="player1-next-puyo-contents" style="width: 100%; height: 100%; position: absolute; justify-content: center; align-items: flex-end;">
                     <ui:VisualElement name="player1-next-puyopuyo1" style="width: 70px; height: 125px; right: 9%;">
-                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Blue Puyo (S)&apos;);" />
-                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Green Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Blue Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Green Puyo (S)&apos;);" />
                     </ui:VisualElement>
                     <ui:VisualElement name="player1-next-puyopuyo2" style="width: 50px; height: 90px; right: 47%;">
-                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Red Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Green Puyo (S)&apos;);" />
                         <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Yellow Puyo (S)&apos;);" />
                     </ui:VisualElement>
                 </ui:VisualElement>
@@ -126,78 +126,78 @@
                     </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="puyos" style="flex-grow: 1; position: absolute; width: 360px; height: 660px; align-items: center; flex-wrap: wrap; flex-direction: row;">
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
-                    <ui:VisualElement name="tile" class="tile" style="background-image: resource(&apos;Puyo Resources/Obstacle Puyo (S)&apos;);" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
+                    <ui:VisualElement name="puyo" class="tile" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="player2-namebox" style="flex-grow: 1; position: absolute; top: 89%; height: 60px; width: 525px; background-image: resource(&apos;Player2 Name&apos;); justify-content: center; align-items: center;">
@@ -207,11 +207,11 @@
                 <ui:VisualElement name="player1-next-border" style="background-image: resource(&apos;Player1 Next Puyo Border&apos;); width: 100%; height: 100%; scale: -1 1; left: 1%;" />
                 <ui:VisualElement name="player1-next-puyo-contents" style="width: 100%; height: 100%; position: absolute; justify-content: center; align-items: flex-start;">
                     <ui:VisualElement name="player1-next-puyopuyo1" style="width: 70px; height: 125px; left: 11%;">
-                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Blue Puyo (S)&apos;);" />
-                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Green Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Blue Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Green Puyo (S)&apos;);" />
                     </ui:VisualElement>
                     <ui:VisualElement name="player1-next-puyopuyo2" style="width: 50px; height: 90px; left: 49%;">
-                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Red Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Green Puyo (S)&apos;);" />
                         <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Yellow Puyo (S)&apos;);" />
                     </ui:VisualElement>
                 </ui:VisualElement>

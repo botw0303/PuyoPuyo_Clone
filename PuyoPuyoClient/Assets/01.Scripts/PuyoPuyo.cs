@@ -49,10 +49,10 @@ public class PuyoPuyo : MonoBehaviour
             IsLanding = true;
             _puyopuyo[0].Fall();
             _puyopuyo[1].Fall();
-            GameManager.Instance.GetBoard(1).NextPuyoList.RemoveAt(0);
-            GameManager.Instance.GetBoard(1).CurPuyoPuyo = null;
-            GameManager.Instance.GetBoard(1).CurPuyoPuyo = GameManager.Instance.GetBoard(1).NextPuyoList[0];
-            GameManager.Instance.GetBoard(1).BoardRender();
+            //GameManager.Instance.GetBoard(1).NextPuyoList.RemoveAt(0);
+            //GameManager.Instance.GetBoard(1).CurPuyoPuyo = null;
+            //GameManager.Instance.GetBoard(1).CurPuyoPuyo = GameManager.Instance.GetBoard(1).NextPuyoList[0];
+            //GameManager.Instance.GetBoard(1).BoardRender();
         }
     }
 
@@ -74,6 +74,6 @@ public class PuyoPuyo : MonoBehaviour
     public void DeSub()
     {
         _inputReader.OnRotateKeyPress -= Rotate;
-        GameManager.Instance.GetBoard(1).NextPuyoList.RemoveAt(0);
+        //GameManager.Instance.GetBoard(1).NextPuyoList.RemoveAt(0);
     }
 }

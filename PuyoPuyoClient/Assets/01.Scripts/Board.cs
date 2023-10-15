@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Board : MonoBehaviour
 {
     //현재 보드에 있는 뿌요 리스트
     public List<Puyo> PuyoList = new List<Puyo>();
 
-    //다음 뿌요뿌요 대기 리스트
-    public List<PuyoPuyo> NextPuyoList;
+    
     
     /// <summary>
     /// 현재 보드 배치
@@ -20,8 +20,9 @@ public class Board : MonoBehaviour
     public Puyo[,] PuyoBoard = new Puyo[6, 12];
 
     //UI
-    [SerializeField]
-    private VisualTreeAsset _treeAsset;
+    //[SerializeField]
+    //private VisualTreeAsset _treeAsset;
+    [SerializeField] UIDocument document;
     private VisualElement _root;
     public VisualElement[,] RenderBoard = new VisualElement[6, 12];
 
@@ -51,8 +52,8 @@ public class Board : MonoBehaviour
             }
         }
 
-        _root = _treeAsset.Instantiate();
-        _root = _root.Q<VisualElement>("player1-board");
+        //_root = _treeAsset.Instantiate();
+        _root = document.rootVisualElement.Q<VisualElement>("player1-board");
         FindElements();
         BoardRender();
     }
@@ -133,8 +134,9 @@ public class Board : MonoBehaviour
         {
             for(int j = 0; j < 12; ++j)
             {
-                Debug.Log(Resources.Load<Sprite>($"Puyo Resources/{PuyoBoard[i, j].Type} Puyo (S)") == null);
-                RenderBoard[i, j].style.backgroundImage = new StyleBackground(Resources.Load<Sprite>($"Puyo Resources/{PuyoBoard[i, j].Type} Puyo (S).asset"));
+                Sprite sprite = Resources.Load<Sprite>($"Puyo Resources/{PuyoBoard[i, j].Type} Puyo (S)");
+                StyleBackground style = new StyleBackground(sprite);
+                RenderBoard[i, j].style.backgroundImage = style;
             }
         }
     }

@@ -552,10 +552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a2b326a5a38b734eb5a823bb9b4e089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuyoList: []
   NextPuyoList: []
-  _treeAsset: {fileID: 9197481963319205126, guid: aaab2e89120661a48903f6344083ef74,
-    type: 3}
+  document: {fileID: 881583563}
   CurPuyoPuyo: {fileID: 0}
   interval: 0
   fallSpeed: 1
@@ -563,7 +561,7 @@ MonoBehaviour:
   ChainBonus: 0
   ConnectBonus: 0
   ColorBonus: 
-  IsGameOver: 0
+  testImg: {fileID: 0}
 --- !u!114 &1136809491
 MonoBehaviour:
   m_ObjectHideFlags: 0
