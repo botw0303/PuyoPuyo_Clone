@@ -22,7 +22,8 @@ public class Board : MonoBehaviour
     //UI
     //[SerializeField]
     //private VisualTreeAsset _treeAsset;
-    [SerializeField] UIDocument document;
+    [SerializeField] private UIDocument document;
+    public UIDocument Document => document;
     private VisualElement _root;
     public VisualElement[,] RenderBoard = new VisualElement[6, 12];
 

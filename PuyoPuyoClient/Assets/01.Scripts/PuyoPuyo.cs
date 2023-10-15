@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuyoPuyo : MonoBehaviour
+public class PuyoPuyo
 {
     //»Ñ¿ä µ¢¾î¸®
     private Puyo[] _puyopuyo = new Puyo[2];
