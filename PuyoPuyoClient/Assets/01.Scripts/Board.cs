@@ -35,21 +35,21 @@ public class Board : MonoBehaviour
 
     private bool _isCalc = false;
 
-    public int PopPuyoCnt = 0;
-    public int ChainBonus = 0;
-    public int ConnectBonus = 0;
-    public List<PuyoType> ColorBonus = new List<PuyoType>();
+    private int PopPuyoCnt = 0;
+    private int ChainBonus = 0;
+    private int ConnectBonus = 0;
+    private List<PuyoType> ColorBonus = new List<PuyoType>();
 
     public bool IsGameOver = false;
 
     private void Awake()
     {
-        for(int i = 0; i < 6; ++i)
+        for(int i = 0; i < 12; ++i)
         {
-            for(int j = 0; j < 12; ++j)
+            for(int j = 0; j < 6; ++j)
             {
-                PuyoBoard[i, j] = new Puyo();
-                PuyoBoard[i, j].Init(PuyoType.None, i, j);
+                PuyoBoard[j, i] = new Puyo();
+                PuyoBoard[j, i].Init(PuyoType.None, j, i);
             }
         }
 
@@ -61,6 +61,15 @@ public class Board : MonoBehaviour
 
     public void Update()
     {
+        if(CurPuyoPuyo != null)
+        {
+            for(int i = 0; i < 2; i++)
+            {
+                Debug.Log($"puyo0 PosX: {CurPuyoPuyo.Puyos[0].PosX}, PosY: {CurPuyoPuyo.Puyos[0].PosY} puyo1 PosX: {CurPuyoPuyo.Puyos[1].PosX}, PosY: {CurPuyoPuyo.Puyos[1].PosY}");
+                //Debug.Log($"puyo0 PosX: {CurPuyoPuyo.Puyos[0].PosX}, PosY: {CurPuyoPuyo.Puyos[0].PosY}");
+                //Debug.Log($"puyo1 PosX: {CurPuyoPuyo.Puyos[1].PosX}, PosY: {CurPuyoPuyo.Puyos[1].PosY}");
+            }
+        }
         UpdateBoard();
     }
 
@@ -69,15 +78,18 @@ public class Board : MonoBehaviour
         if (interval > fallSpeed)
         {
             if(CurPuyoPuyo != null)
+            {
                 CurPuyoPuyo.Fall();
-            FindSamePuyo();
-            BoardRender();
+                Debug.Log("_curPuyoPuyo is not null");
+            }
+            //FindSamePuyo();
             interval = 0f;
         }
         else
         {
             interval += Time.deltaTime;
         }
+        BoardRender();
     }
 
     public void FindSamePuyo()
@@ -131,13 +143,13 @@ public class Board : MonoBehaviour
 
     public void BoardRender()
     {
-        for(int i = 0; i < 6; ++i)
+        for(int i = 0; i < 12; ++i)
         {
-            for(int j = 0; j < 12; ++j)
+            for(int j = 0; j < 6; ++j)
             {
-                Sprite sprite = Resources.Load<Sprite>($"Puyo Resources/{PuyoBoard[i, j].Type} Puyo (S)");
+                Sprite sprite = Resources.Load<Sprite>($"Puyo Resources/{PuyoBoard[j, i].Type} Puyo (S)");
                 StyleBackground style = new StyleBackground(sprite);
-                RenderBoard[i, j].style.backgroundImage = style;
+                RenderBoard[j, i].style.backgroundImage = style;
             }
         }
     }
@@ -147,11 +159,11 @@ public class Board : MonoBehaviour
         List<VisualElement> tiles = _root.Query<VisualElement>(className: "tile").ToList();
 
         int k = 0;
-        for(int i = 0; i < 6; ++i)
+        for(int i = 0; i < 12; ++i)
         {
-            for(int j = 0; j < 12; ++j)
+            for(int j = 0; j < 6; ++j)
             {
-                RenderBoard[i, j] = tiles[k];
+                RenderBoard[j, i] = tiles[k];
                 ++k;
             }
         }

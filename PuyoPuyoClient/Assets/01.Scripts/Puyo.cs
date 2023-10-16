@@ -45,7 +45,7 @@ public class Puyo
     { 
         new Tuple<int, int>(0, -1),
         new Tuple<int, int>(1, 0), 
-        new Tuple<int, int>(0, -1), 
+        new Tuple<int, int>(0, 1), 
         new Tuple<int, int>(-1, 0) 
     };
     public Tuple<int, int>[] RotateVals => _rotateVals;
@@ -64,7 +64,9 @@ public class Puyo
     /// </summary>
     public void Fall()
     {
-        for(int i = _posY; i < 12; ++i)
+        GameManager.Instance.GetSpanwer().MoveNextPuyo();
+        GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY] = new Puyo();
+        for(int i = _posY; i < 11; ++i)
         {
             if(GameManager.Instance.GetBoard(1).PuyoBoard[_posX, i].Type != PuyoType.None)
             {
@@ -72,6 +74,7 @@ public class Puyo
                 break;
             }
         }
+        GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY] = this;
         GameManager.Instance.GetBoard(1).BoardRender();
     }
 
@@ -90,8 +93,7 @@ public class Puyo
     //매개변수에 따라 좌/우 이동
     public void Move(int dir)
     {
-        if(GameManager.Instance.GetBoard(1).PuyoBoard[_posX + dir, _posY].Type == PuyoType.None
-            && !(_posX + dir > 5 || _posX + dir < 0))
+        if(!(_posX + dir > 5 || _posX + dir < 0) && GameManager.Instance.GetBoard(1).PuyoBoard[_posX + dir, _posY].Type == PuyoType.None)
         {
             GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY] = new Puyo();
             _posX += dir;
@@ -103,15 +105,22 @@ public class Puyo
     public void RotatePuyo(int dir)
     {
         //현재 인덱스에서 회전값을 더해 해당 위치에 뿌요가 있는지 확인
-        if(GameManager.Instance.GetBoard(1).PuyoBoard[_posX + _rotateVals[(RotateVal + dir) % 4].Item1, _posY + _rotateVals[(RotateVal + dir) % 4].Item2].Type == PuyoType.None)
+        if(GameManager.Instance.GetBoard(1).PuyoBoard[
+            _posX + _rotateVals[(RotateVal + dir) % 4].Item1, 
+            _posY + _rotateVals[(RotateVal + dir) % 4].Item2].Type == PuyoType.None)
         {
+            Debug.Log("rotate");
             RotateVal = (RotateVal + dir) % 4;
+            GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY] = new Puyo();
+            _posX = GameManager.Instance.GetBoard(1).CurPuyoPuyo.Puyos[1].PosX + _rotateVals[RotateVal].Item1;
+            _posY = GameManager.Instance.GetBoard(1).CurPuyoPuyo.Puyos[1].PosY + _rotateVals[RotateVal].Item2;
+            GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY] = this;
         }
     }
 
     public void DFS(int x, int y)
     {
-        GameManager.Instance.GetBoard(1).PuyoBoard[x, y].Visited = true;
+        GameManager.Instance.GetBoard(1).PuyoBoard[y, x].Visited = true;
 
         for(int i = 0; i < 4; ++i)
         {
@@ -120,10 +129,10 @@ public class Puyo
 
             if (nx < 0 || nx >= 6 || ny < 0 || ny >= 12)
                 continue;
-            if (GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny].Type == PuyoType.None)
+            if (GameManager.Instance.GetBoard(1).PuyoBoard[ny, nx].Type == PuyoType.None)
                 continue;
-            if (GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny].Visited
-                || GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny].Type != this._type)
+            if (GameManager.Instance.GetBoard(1).PuyoBoard[ny, nx].Visited
+                || GameManager.Instance.GetBoard(1).PuyoBoard[ny, nx].Type != this._type)
                 continue;
 
             DFS(nx, ny);
@@ -136,10 +145,10 @@ public class Puyo
         Visited = false;
         IsPop = false;
         _type = PuyoType.None;
-        GameManager.Instance.GetBoard(1).PopPuyoCnt++;
-        if (!(GameManager.Instance.GetBoard(1).ColorBonus.Contains(this._type)))
-        {
-            GameManager.Instance.GetBoard(1).ColorBonus.Add(this._type);
-        }
+        //GameManager.Instance.GetBoard(1).PopPuyoCnt++;
+        //if (!(GameManager.Instance.GetBoard(1).ColorBonus.Contains(this._type)))
+        //{
+        //    GameManager.Instance.GetBoard(1).ColorBonus.Add(this._type);
+        //}
     }
 }

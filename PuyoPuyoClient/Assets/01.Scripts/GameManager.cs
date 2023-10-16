@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     //플레이어1, 2의 보드
     private Board[] _boards = new Board[2];
 
+    private PuyoSpawner _spawner;
+
     private void Awake()
     {
         if (Instance != null)
@@ -20,6 +22,8 @@ public class GameManager : MonoBehaviour
 
         _boards[0] = GameObject.Find("Player1").GetComponent<Board>();
         _boards[1] = GameObject.Find("Player2").GetComponent<Board>();
+
+        _spawner = GetComponent<PuyoSpawner>();
     }
 
     /// <summary>
@@ -32,4 +36,6 @@ public class GameManager : MonoBehaviour
     ///     로 입력하여 직관적으로 알 수 있게 함
     /// <returns></returns>
     public Board GetBoard(int _playerNum) { return _boards[_playerNum - 1]; }
+
+    public PuyoSpawner GetSpanwer() { return _spawner; }
 }
