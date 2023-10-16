@@ -67,12 +67,16 @@ public class Puyo
     public void Fall()
     {
         GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY] = new Puyo();
-        for(int i = _posY; i < 11; ++i)
+        for(int i = _posY + 1; i < 12; ++i)
         {
             if(GameManager.Instance.GetBoard(1).PuyoBoard[_posX, i].Type != PuyoType.None)
             {
                 _posY = i - 1;
                 break;
+            }
+            else
+            {
+                _posY = i;
             }
         }
         GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY] = this;
@@ -110,8 +114,8 @@ public class Puyo
             _posX + _rotateVals[(RotateVal + dir) % 4].Item1, 
             _posY + _rotateVals[(RotateVal + dir) % 4].Item2].Type == PuyoType.None)
         {
-            Debug.Log("rotate");
             RotateVal = (RotateVal + dir) % 4;
+            Debug.Log($"{RotateVal}");
             GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY] = new Puyo();
             _posX = GameManager.Instance.GetBoard(1).CurPuyoPuyo.Puyos[1].PosX + _rotateVals[RotateVal].Item1;
             _posY = GameManager.Instance.GetBoard(1).CurPuyoPuyo.Puyos[1].PosY + _rotateVals[RotateVal].Item2;
@@ -119,9 +123,11 @@ public class Puyo
         }
     }
 
-    public void DFS(int x, int y)
+    public void DFS(Puyo puyo)
     {
-        GameManager.Instance.GetBoard(1).PuyoBoard[y, x].Visited = true;
+        Visited = true;
+        int x = puyo.PosX;
+        int y = puyo.PosY;
 
         for(int i = 0; i < 4; ++i)
         {
@@ -130,14 +136,15 @@ public class Puyo
 
             if (nx < 0 || nx >= 6 || ny < 0 || ny >= 12)
                 continue;
-            if (GameManager.Instance.GetBoard(1).PuyoBoard[ny, nx].Type == PuyoType.None)
+            if (GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny].Type == PuyoType.None)
                 continue;
-            if (GameManager.Instance.GetBoard(1).PuyoBoard[ny, nx].Visited
-                || GameManager.Instance.GetBoard(1).PuyoBoard[ny, nx].Type != this._type)
+            if (GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny].Visited
+                || GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny].Type != _type)
                 continue;
 
-            DFS(nx, ny);
+            DFS(GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny]);
             IsPop = true;
+            Pop();
         }
     }
 

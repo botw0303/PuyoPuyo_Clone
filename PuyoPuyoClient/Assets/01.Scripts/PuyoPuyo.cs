@@ -18,7 +18,7 @@ public class PuyoPuyo
 
     private InputReader _inputReader;
 
-    public void Init()
+    public void Setting()
     {
         _inputReader = GameObject.Find("Player1").GetComponent<InputReader>();
 
@@ -29,7 +29,10 @@ public class PuyoPuyo
         Puyo newPuyo2 = new Puyo();
         newPuyo2.Init((PuyoType)Random.Range(1, 6), 2, 1);
         _puyopuyo[1] = newPuyo2;
+    }
 
+    public void Init()
+    {
         //뿌요 리스트에 추가
         GameManager.Instance.GetBoard(1).PuyoList.Add(_puyopuyo[0]);
         GameManager.Instance.GetBoard(1).PuyoList.Add(_puyopuyo[1]);
@@ -43,17 +46,47 @@ public class PuyoPuyo
     //낙하
     public void Fall()
     {
+        //Debug.Log($"puyopuyo0 {_puyopuyo[0].PosX}, {_puyopuyo[0].PosY}");
+        //Debug.Log($"puyopuyo1 {_puyopuyo[1].PosX}, {_puyopuyo[1].PosY}");
         if(_puyopuyo[0].PosY < 11 && _puyopuyo[1].PosY < 11)
         {
+
             if(_puyopuyo[0].PosY > _puyopuyo[1].PosY)
             {
-                _puyopuyo[0].FallOneBlock();
-                _puyopuyo[1].FallOneBlock();
+                if((GameManager.Instance.GetBoard(1).PuyoBoard[_puyopuyo[0].PosX, _puyopuyo[0].PosY + 1].Type == PuyoType.None
+                    && GameManager.Instance.GetBoard(1).PuyoBoard[_puyopuyo[1].PosX, _puyopuyo[1].PosY + 1].Type == PuyoType.None)
+                    || (GameManager.Instance.GetBoard(1).PuyoBoard[_puyopuyo[0].PosX, _puyopuyo[0].PosY + 1].Type != PuyoType.None
+                    || GameManager.Instance.GetBoard(1).PuyoBoard[_puyopuyo[1].PosX, _puyopuyo[1].PosY + 1].Type != PuyoType.None)
+                    && (_puyopuyo[0].RotateVal == 0 || _puyopuyo[0].RotateVal == 2))
+                {
+                    _puyopuyo[0].FallOneBlock();
+                    _puyopuyo[1].FallOneBlock();
+                }
+                else
+                {
+                    _puyopuyo[0].Fall();
+                    _puyopuyo[1].Fall();
+                    GameManager.Instance.GetSpawner().MoveNextPuyo();
+                }
             }
             else
             {
-                _puyopuyo[1].FallOneBlock();
-                _puyopuyo[0].FallOneBlock();
+                //if ((GameManager.Instance.GetBoard(1).PuyoBoard[_puyopuyo[0].PosX, _puyopuyo[0].PosY + 1].Type == PuyoType.None
+                //    && GameManager.Instance.GetBoard(1).PuyoBoard[_puyopuyo[1].PosX, _puyopuyo[1].PosY + 1].Type == PuyoType.None)
+                //    || ((GameManager.Instance.GetBoard(1).PuyoBoard[_puyopuyo[0].PosX, _puyopuyo[0].PosY + 1].Type != PuyoType.None
+                //    || GameManager.Instance.GetBoard(1).PuyoBoard[_puyopuyo[1].PosX, _puyopuyo[1].PosY + 1].Type != PuyoType.None)
+                //    && (_puyopuyo[0].RotateVal == 0 || _puyopuyo[0].RotateVal == 2))
+                //    || ((GameManager.Instance.GetBoard(1).PuyoBoard[_puyopuyo[0].PosX, _puyopuyo[0].PosY + 1].Type == PuyoType.None)
+                //{
+                //    _puyopuyo[1].FallOneBlock();
+                //    _puyopuyo[0].FallOneBlock();
+                //}
+                //else
+                //{
+                //    _puyopuyo[1].Fall();
+                //    _puyopuyo[0].Fall();
+                //    GameManager.Instance.GetSpawner().MoveNextPuyo();
+                //}
             }
         }
         else
@@ -68,7 +101,7 @@ public class PuyoPuyo
                 _puyopuyo[1].Fall();
                 _puyopuyo[0].Fall();
             }
-            GameManager.Instance.GetSpanwer().MoveNextPuyo();
+            GameManager.Instance.GetSpawner().MoveNextPuyo();
         }
         GameManager.Instance.GetBoard(1).BoardRender();
     }
@@ -76,15 +109,31 @@ public class PuyoPuyo
     //매개변수의 값에 따라 회전
     public void Move(int dir)
     {
-        if(_puyopuyo[0].PosX > _puyopuyo[1].PosX)
+        if(dir == 1)
         {
-            _puyopuyo[1].Move(dir);
-            _puyopuyo[0].Move(dir);
+            if(_puyopuyo[0].PosX > _puyopuyo[1].PosX)
+            {
+                _puyopuyo[0].Move(dir);
+                _puyopuyo[1].Move(dir);
+            }
+            else
+            {
+                _puyopuyo[1].Move(dir);
+                _puyopuyo[0].Move(dir);
+            }
         }
         else
         {
-            _puyopuyo[0].Move(dir);
-            _puyopuyo[1].Move(dir);
+            if (_puyopuyo[0].PosX > _puyopuyo[1].PosX)
+            {
+                _puyopuyo[1].Move(dir);
+                _puyopuyo[0].Move(dir);
+            }
+            else
+            {
+                _puyopuyo[0].Move(dir);
+                _puyopuyo[1].Move(dir);
+            }
         }
         GameManager.Instance.GetBoard(1).BoardRender();
     }

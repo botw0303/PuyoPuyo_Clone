@@ -35,8 +35,8 @@ public class InputReader : MonoBehaviour
             GameManager.Instance.GetBoard(1).fallSpeed = 1f;
 
         //Z를 누른 시점 - 왼쪽으로 회전
-        if(Input.GetKeyDown(KeyCode.Z) && GameManager.Instance.GetBoard(1).CurPuyoPuyo != null)
-            GameManager.Instance.GetBoard(1).CurPuyoPuyo.Rotate(-1);
+        //if(Input.GetKeyDown(KeyCode.Z) && GameManager.Instance.GetBoard(1).CurPuyoPuyo != null)
+        //    GameManager.Instance.GetBoard(1).CurPuyoPuyo.Rotate(-1);
         //X를 누른 시점 - 오른쪽으로 회전
         else if (Input.GetKeyDown(KeyCode.X) && GameManager.Instance.GetBoard(1).CurPuyoPuyo != null)
             GameManager.Instance.GetBoard(1).CurPuyoPuyo.Rotate(1);

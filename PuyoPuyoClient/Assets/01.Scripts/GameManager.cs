@@ -37,5 +37,5 @@ public class GameManager : MonoBehaviour
     /// <returns></returns>
     public Board GetBoard(int _playerNum) { return _boards[_playerNum - 1]; }
 
-    public PuyoSpawner GetSpanwer() { return _spawner; }
+    public PuyoSpawner GetSpawner() { return _spawner; }
 }

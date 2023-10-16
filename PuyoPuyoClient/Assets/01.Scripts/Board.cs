@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
+using System;
 
 public class Board : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class Board : MonoBehaviour
 
     public bool IsGameOver = false;
 
-    private List<VisualElement> _nextPuyoUIList = new List<VisualElement>();
+    private List<Tuple<VisualElement, VisualElement>> _nextPuyoUIList = new List<Tuple<VisualElement, VisualElement>>();
 
     private void Start()
     {
@@ -58,7 +59,7 @@ public class Board : MonoBehaviour
         //_root = _treeAsset.Instantiate();
         _root = document.rootVisualElement.Q<VisualElement>("player1-board");
         FindElements();
-        GameManager.Instance.GetSpanwer().SpawnStart();
+        GameManager.Instance.GetSpawner().SpawnStart();
         BoardRender();
     }
 
@@ -83,9 +84,8 @@ public class Board : MonoBehaviour
             if(CurPuyoPuyo != null)
             {
                 CurPuyoPuyo.Fall();
-                Debug.Log("_curPuyoPuyo is not null");
             }
-            //FindSamePuyo();
+            FindSamePuyo();
             interval = 0f;
         }
         else
@@ -97,51 +97,55 @@ public class Board : MonoBehaviour
 
     public void FindSamePuyo()
     {
-        while (_isCalc)
+        PuyoList.ForEach(puyo =>
         {
-            PuyoList.ForEach(puyo =>
-            {
-                puyo.DFS(puyo.PosX, puyo.PosY);
-            });
+            puyo.DFS(puyo);
+        });
+        //while (_isCalc)
+        //{
+        //    PuyoList.ForEach(puyo =>
+        //    {
+        //        puyo.DFS(puyo);
+        //    });
 
-            _isCalc = false;
+        //    _isCalc = false;
 
-            for(int i = 0; i < PuyoList.Count; ++i)
-            {
-                if (PuyoList[i].IsPop)
-                {
-                    _isCalc = true;
-                    PuyoList[i].Pop();
-                    PuyoList.RemoveAt(i);
-                }
-            }
+        //    for(int i = 0; i < PuyoList.Count; ++i)
+        //    {
+        //        if (PuyoList[i].IsPop)
+        //        {
+        //            _isCalc = true;
+        //            PuyoList[i].Pop();
+        //            PuyoList.RemoveAt(i);
+        //        }
+        //    }
 
-            //점수 구하는 거 하는 도중이었음(지금은 연쇄 보너스 작업 중)
-            //ChainBonus
+        //    //점수 구하는 거 하는 도중이었음(지금은 연쇄 보너스 작업 중)
+        //    //ChainBonus
 
-            for(int i = 0; i < PuyoList.Count; ++i)
-            {
-                PuyoList[i].Fall();
-            }
+        //    for(int i = 0; i < PuyoList.Count; ++i)
+        //    {
+        //        PuyoList[i].Fall();
+        //    }
 
-            BoardRender();
+        //    BoardRender();
 
-            /*
-            아래로 한칸씩 떨어지고
-            좌우로 움직일 수 있고
-            떨어지는 거 가속할 수 있고
-            회전시킬 수 있고
-            착지하면 주변 확인해서 터짐
-            다 떨어지면 아래로 더 갈 수 있는지 확인하고 떨어져야하면 떨어지게 해야함
-            한번 터트리고 뿌요 다 떨어지게하고 다시 확인해서 터트릴 거 있는지 확인해야함
+        //    /*
+        //    아래로 한칸씩 떨어지고
+        //    좌우로 움직일 수 있고
+        //    떨어지는 거 가속할 수 있고
+        //    회전시킬 수 있고
+        //    착지하면 주변 확인해서 터짐
+        //    다 떨어지면 아래로 더 갈 수 있는지 확인하고 떨어져야하면 떨어지게 해야함
+        //    한번 터트리고 뿌요 다 떨어지게하고 다시 확인해서 터트릴 거 있는지 확인해야함
             
-            터진 수, 연쇄 수 등에 따라서 점수 줘야함
-            점수에 따라서 상대한테 방해뿌요 떨궈줘야함
-            뿌요, 점수, 승점, 다음 뿌요 렌더링
-            패배 조건 체크해줘야함
-            연출(이펙트, 사운드)
-             */
-        }
+        //    터진 수, 연쇄 수 등에 따라서 점수 줘야함
+        //    점수에 따라서 상대한테 방해뿌요 떨궈줘야함
+        //    뿌요, 점수, 승점, 다음 뿌요 렌더링
+        //    패배 조건 체크해줘야함
+        //    연출(이펙트, 사운드)
+        //     */
+        //}
     }
 
     public void BoardRender()
@@ -154,6 +158,21 @@ public class Board : MonoBehaviour
                 StyleBackground style = new StyleBackground(sprite);
                 RenderBoard[j, i].style.backgroundImage = style;
             }
+        }
+
+        for(int i = 0; i < 2; ++i)
+        {
+            //Debug.Log(_nextPuyoUIList[i].Item1.style.backgroundImage == null);
+            //Debug.Log(_nextPuyoUIList[i].Item2.style.backgroundImage == null);
+            
+            //Debug.Log(GameManager.Instance.GetSpawner().NextPuyoList[i + 1].Puyos[0] == null);
+            //Debug.Log(GameManager.Instance.GetSpawner().NextPuyoList[i + 1].Puyos[1] == null);
+            _nextPuyoUIList[i].Item1.style.backgroundImage =
+            new StyleBackground(Resources.Load<Sprite>(
+                $"Puyo Resources/{GameManager.Instance.GetSpawner().NextPuyoList[i + 1].Puyos[0].Type} Puyo (S)"));
+            _nextPuyoUIList[i].Item2.style.backgroundImage =
+                new StyleBackground(Resources.Load<Sprite>(
+                    $"Puyo Resources/{GameManager.Instance.GetSpawner().NextPuyoList[i + 1].Puyos[1].Type} Puyo (S)"));
         }
     }
 
@@ -171,7 +190,14 @@ public class Board : MonoBehaviour
             }
         }
 
-        _root = GameManager.Instance.GetBoard(1).Document.rootVisualElement.Q<VisualElement>("player1-next-puyo");
-        _nextPuyoUIList = _root.Query<VisualElement>("player1-next-puyo").ToList();
+        VisualElement nextPuyoContents = _root.Q<VisualElement>("player1-next-puyo-contents");
+        for (int i = 0; i < 2; ++i)
+        {
+            VisualElement item1 = new VisualElement();
+            item1 = nextPuyoContents[i][0];
+            VisualElement item2 = new VisualElement();
+            item2 = nextPuyoContents[i][1];
+            _nextPuyoUIList.Add(new Tuple<VisualElement, VisualElement>(item1, item2));
+        }
     }
 }
