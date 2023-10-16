@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Puyo
 {
     //자신이 어떤 뿌요인지 나타내는 타입
+    [SerializeField]
     private PuyoType _type = PuyoType.None;
     public PuyoType Type => _type;
 
@@ -64,7 +66,6 @@ public class Puyo
     /// </summary>
     public void Fall()
     {
-        GameManager.Instance.GetSpanwer().MoveNextPuyo();
         GameManager.Instance.GetBoard(1).PuyoBoard[_posX, _posY] = new Puyo();
         for(int i = _posY; i < 11; ++i)
         {

@@ -552,16 +552,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a2b326a5a38b734eb5a823bb9b4e089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextPuyoList: []
+  PuyoList: []
   document: {fileID: 881583563}
-  CurPuyoPuyo: {fileID: 0}
+  CurPuyoPuyo:
+    _puyopuyo:
+    - _type: 6
+      Visited: 0
+      IsPop: 0
+      RotateVal: 0
+    - _type: 6
+      Visited: 0
+      IsPop: 0
+      RotateVal: 0
+    interval: 0
+    fallSpeed: 0.5
+    IsLanding: 0
   interval: 0
   fallSpeed: 1
-  PopPuyoCnt: 0
-  ChainBonus: 0
-  ConnectBonus: 0
-  ColorBonus: 
-  testImg: {fileID: 0}
+  IsGameOver: 0
 --- !u!114 &1136809491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,6 +592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1312522090}
   - component: {fileID: 1312522091}
+  - component: {fileID: 1312522092}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -618,6 +627,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96daa72381d9809439f4855362061c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1312522092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312522089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a481a8695dcb32499455b9eca2b7fe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextPuyoList: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

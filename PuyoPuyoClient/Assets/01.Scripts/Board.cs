@@ -42,7 +42,9 @@ public class Board : MonoBehaviour
 
     public bool IsGameOver = false;
 
-    private void Awake()
+    private List<VisualElement> _nextPuyoUIList = new List<VisualElement>();
+
+    private void Start()
     {
         for(int i = 0; i < 12; ++i)
         {
@@ -56,6 +58,7 @@ public class Board : MonoBehaviour
         //_root = _treeAsset.Instantiate();
         _root = document.rootVisualElement.Q<VisualElement>("player1-board");
         FindElements();
+        GameManager.Instance.GetSpanwer().SpawnStart();
         BoardRender();
     }
 
@@ -65,7 +68,7 @@ public class Board : MonoBehaviour
         {
             for(int i = 0; i < 2; i++)
             {
-                Debug.Log($"puyo0 PosX: {CurPuyoPuyo.Puyos[0].PosX}, PosY: {CurPuyoPuyo.Puyos[0].PosY} puyo1 PosX: {CurPuyoPuyo.Puyos[1].PosX}, PosY: {CurPuyoPuyo.Puyos[1].PosY}");
+                //Debug.Log($"puyo0 PosX: {CurPuyoPuyo.Puyos[0].PosX}, PosY: {CurPuyoPuyo.Puyos[0].PosY} puyo1 PosX: {CurPuyoPuyo.Puyos[1].PosX}, PosY: {CurPuyoPuyo.Puyos[1].PosY}");
                 //Debug.Log($"puyo0 PosX: {CurPuyoPuyo.Puyos[0].PosX}, PosY: {CurPuyoPuyo.Puyos[0].PosY}");
                 //Debug.Log($"puyo1 PosX: {CurPuyoPuyo.Puyos[1].PosX}, PosY: {CurPuyoPuyo.Puyos[1].PosY}");
             }
@@ -167,5 +170,8 @@ public class Board : MonoBehaviour
                 ++k;
             }
         }
+
+        _root = GameManager.Instance.GetBoard(1).Document.rootVisualElement.Q<VisualElement>("player1-next-puyo");
+        _nextPuyoUIList = _root.Query<VisualElement>("player1-next-puyo").ToList();
     }
 }

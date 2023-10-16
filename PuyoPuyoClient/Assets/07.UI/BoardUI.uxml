@@ -99,12 +99,12 @@
                 <ui:VisualElement name="player1-next-border" style="background-image: resource(&apos;Player2 Next Puyo Border&apos;); width: 100%; height: 100%; scale: -1 1; left: 1%;" />
                 <ui:VisualElement name="player1-next-puyo-contents" style="width: 100%; height: 100%; position: absolute; justify-content: center; align-items: flex-end;">
                     <ui:VisualElement name="player1-next-puyopuyo" style="width: 70px; height: 125px; right: 9%;">
-                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Blue Puyo (S)&apos;);" />
-                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Green Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
                     </ui:VisualElement>
                     <ui:VisualElement name="player1-next-puyopuyo" style="width: 50px; height: 90px; right: 47%;">
-                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Green Puyo (S)&apos;);" />
-                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Yellow Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
@@ -207,12 +207,12 @@
                 <ui:VisualElement name="player1-next-border" style="background-image: resource(&apos;Player1 Next Puyo Border&apos;); width: 100%; height: 100%; scale: -1 1; left: 1%;" />
                 <ui:VisualElement name="player1-next-puyo-contents" style="width: 100%; height: 100%; position: absolute; justify-content: center; align-items: flex-start;">
                     <ui:VisualElement name="player1-next-puyopuyo1" style="width: 70px; height: 125px; left: 11%;">
-                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Blue Puyo (S)&apos;);" />
-                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Green Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
                     </ui:VisualElement>
                     <ui:VisualElement name="player1-next-puyopuyo2" style="width: 50px; height: 90px; left: 49%;">
-                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/Green Puyo (S)&apos;);" />
-                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Yellow Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo1" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
+                        <ui:VisualElement name="next-puyo2" style="width: 100%; height: 50%; background-image: resource(&apos;Puyo Resources/None Puyo (S)&apos;);" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>

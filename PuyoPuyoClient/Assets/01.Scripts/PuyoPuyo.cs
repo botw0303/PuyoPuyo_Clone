@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class PuyoPuyo
 {
     //»Ñ¿ä µ¢¾î¸®
+    [SerializeField]
     private Puyo[] _puyopuyo = new Puyo[2];
     public Puyo[] Puyos => _puyopuyo;
 
@@ -56,13 +58,17 @@ public class PuyoPuyo
         }
         else
         {
-            IsLanding = true;
-            _puyopuyo[1].Fall();
-            _puyopuyo[0].Fall();
-            //GameManager.Instance.GetBoard(1).NextPuyoList.RemoveAt(0);
-            //GameManager.Instance.GetBoard(1).CurPuyoPuyo = null;
-            //GameManager.Instance.GetBoard(1).CurPuyoPuyo = GameManager.Instance.GetBoard(1).NextPuyoList[0];
-            //GameManager.Instance.GetBoard(1).BoardRender();
+            if (_puyopuyo[0].PosY > _puyopuyo[1].PosY)
+            {
+                _puyopuyo[0].Fall();
+                _puyopuyo[1].Fall();
+            }
+            else
+            {
+                _puyopuyo[1].Fall();
+                _puyopuyo[0].Fall();
+            }
+            GameManager.Instance.GetSpanwer().MoveNextPuyo();
         }
         GameManager.Instance.GetBoard(1).BoardRender();
     }
