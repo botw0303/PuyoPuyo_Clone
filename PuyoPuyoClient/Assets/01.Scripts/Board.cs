@@ -105,17 +105,58 @@ public class Board : MonoBehaviour
         while(true)
         {
             lastPopPuyoCnt = PopPuyoCnt;
-            PuyoList.ForEach(puyo =>
+            for(int i = 0; i < 12; ++i)
             {
-                puyo.DFS(puyo);
-            });
-            if (PopPuyoCnt > lastPopPuyoCnt || !(PopPuyoCnt < 4))
+                for(int j = 0; j < 6; ++j)
+                {
+                    if(PuyoBoard[j, i].Type != PuyoType.None)
+                    {
+                        PuyoBoard[j, i].DFS(PuyoBoard[j, i]);
+                    }
+                }
+            }
+            //PuyoList.ForEach(puyo =>
+            //{
+            //   if(!puyo.Visited)
+            //        puyo.DFS(puyo);
+            //});
+            Debug.Log($"PopPuyoCnt: {PopPuyoCnt}, LastPopPuyoCnt: {lastPopPuyoCnt}");
+            if (PopPuyoCnt > lastPopPuyoCnt + 3)
             {
                 _needScoreCalc = true;
                 ChainBonus++;
+                PuyoList.ForEach(puyo =>
+                {
+                    puyo.Visited = false;
+
+                    //puyo.Fall();
+                });
+                for (int i = 0; i < PuyoList.Count; ++i)
+                {
+                    if (PuyoList[i].IsPop)
+                    {
+                        PuyoList[i].Pop();
+                        PuyoList.RemoveAt(i);
+                        i--;
+                    }
+                }
+                for(int i = 11; i >= 0 ; --i)
+                {
+                    for(int j = 5; j >= 0 ; --j)
+                    {
+                        if(PuyoBoard[j, i].Type != PuyoType.None)
+                        {
+                            PuyoBoard[j, i].Fall();
+                        }
+                    }
+                }
             }
             else
             {
+                PuyoList.ForEach(puyo =>
+                {
+                    puyo.Visited = false;
+                });
                 break;
             }
         }
@@ -162,6 +203,22 @@ public class Board : MonoBehaviour
             _score = PopPuyoCnt * (ChainBonus + ConnectBonus + ColorBonus.Count) * 10;
             if (_score == 0)
                 _score = 1;
+            PuyoList.ForEach(puyo =>
+            {
+                if (puyo.IsPop)
+                {
+                    puyo.Pop();
+                }
+            });
+            for(int i = 0; i < PuyoList.Count; ++i)
+            {
+                if (PuyoList[i].IsPop)
+                {
+                    PuyoList[i].Pop();
+                    PuyoList.RemoveAt(i);
+                    i--;
+                }
+            }
         }
         else
         {
@@ -171,7 +228,11 @@ public class Board : MonoBehaviour
             ColorBonus.Clear();
             ColorBonusVal = 0;
         }
-
+        PopPuyoCnt = 0;
+        ChainBonus = 0;
+        ConnectBonus = 0;
+        ColorBonus.Clear();
+        ColorBonusVal = 0;
         _needScoreCalc = false;
         
         //while (_isCalc)

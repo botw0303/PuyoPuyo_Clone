@@ -128,6 +128,7 @@ public class Puyo
         Visited = true;
         int x = puyo.PosX;
         int y = puyo.PosY;
+        Debug.Log($"x: {x}, y: {y}");
 
         for(int i = 0; i < 4; ++i)
         {
@@ -142,8 +143,19 @@ public class Puyo
                 || GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny].Type != _type)
                 continue;
 
+            GameManager.Instance.GetBoard(1).PopPuyoCnt++;
+            if(!GameManager.Instance.GetBoard(1).ColorBonus.ContainsKey(_type))
+                GameManager.Instance.GetBoard(1).ColorBonus.Add(_type, _type);
+            GameManager.Instance.GetBoard(1).ConnectBonus++;
+            IsPop = true;
             DFS(GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny]);
-            Pop();
+            if(GameManager.Instance.GetBoard(1).PopPuyoCnt <= 3)
+            {
+                GameManager.Instance.GetBoard(1).PopPuyoCnt--;
+                GameManager.Instance.GetBoard(1).ColorBonus.Remove(_type);
+                GameManager.Instance.GetBoard(1).ConnectBonus--;
+                IsPop = false;
+            }
         }
     }
 
@@ -152,9 +164,7 @@ public class Puyo
         Visited = false;
         IsPop = false;
         _type = PuyoType.None;
-        GameManager.Instance.GetBoard(1).PopPuyoCnt++;
-        GameManager.Instance.GetBoard(1).ColorBonus.Add(_type, _type);
-        GameManager.Instance.GetBoard(1).ConnectBonus++;
+        
         //GameManager.Instance.GetBoard(1).PopPuyoCnt++;
         //if (!(GameManager.Instance.GetBoard(1).ColorBonus.Contains(this._type)))
         //{
