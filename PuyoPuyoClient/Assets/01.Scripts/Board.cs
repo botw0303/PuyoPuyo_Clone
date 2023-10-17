@@ -36,10 +36,12 @@ public class Board : MonoBehaviour
 
     private bool _isCalc = false;
 
+    private bool _needScoreCalc = false;
     public int PopPuyoCnt = 0;
     public int ChainBonus = 0;
     public int ConnectBonus = 0;
     public Dictionary<PuyoType, PuyoType> ColorBonus = new Dictionary<PuyoType, PuyoType>();
+    public int ColorBonusVal = 0;
     private int _score = 0;
     public int Score => _score;
 
@@ -107,27 +109,71 @@ public class Board : MonoBehaviour
             {
                 puyo.DFS(puyo);
             });
-            if (PopPuyoCnt > lastPopPuyoCnt)
+            if (PopPuyoCnt > lastPopPuyoCnt || !(PopPuyoCnt < 4))
+            {
+                _needScoreCalc = true;
                 ChainBonus++;
-            else 
+            }
+            else
+            {
                 break;
+            }
         }
 
-        //연쇄 보너스 계산
-        if (ChainBonus == 1)
+        if (_needScoreCalc)
         {
-            ChainBonus = 0;
-        }
-        else if (ChainBonus <= 3)
-        {
-            ChainBonus = (ChainBonus - 1) * 8;
+            //연쇄 보너스 계산
+            if (ChainBonus == 1)
+            {
+                ChainBonus = 0;
+            }
+            else if (ChainBonus <= 3)
+            {
+                ChainBonus = (ChainBonus - 1) * 8;
+            }
+            else
+            {
+                ChainBonus = (ChainBonus - 3) * 32;
+            }
+
+            //연결 보너스 계산
+            if (ConnectBonus <= 4)
+            {
+                ConnectBonus = 0;
+            }
+            else if (ConnectBonus >= 11)
+            {
+                ConnectBonus = 10;
+            }
+            else
+            {
+                ConnectBonus -= 3;
+            }
+
+            //색수 보너스 계산
+            //2^(색 수 - 2)*3 + 삼항 연산자(2 ^ (색 수 - 2) == -1 이 나올 때는 0)
+            if ((ColorBonus.Count - 2) == -1)
+                ColorBonusVal = 0;
+            else
+            {
+                ColorBonusVal = 2 * (ColorBonus.Count - 2) * 3;
+            }
+
+            _score = PopPuyoCnt * (ChainBonus + ConnectBonus + ColorBonus.Count) * 10;
+            if (_score == 0)
+                _score = 1;
         }
         else
         {
-            ChainBonus = (ChainBonus - 3) * 32;
+            PopPuyoCnt = 0;
+            ChainBonus = 0;
+            ConnectBonus = 0;
+            ColorBonus.Clear();
+            ColorBonusVal = 0;
         }
 
-        _score = PopPuyoCnt * (ChainBonus + ConnectBonus + ColorBonus.Count) * 10;
+        _needScoreCalc = false;
+        
         //while (_isCalc)
         //{
         //    PuyoList.ForEach(puyo =>
