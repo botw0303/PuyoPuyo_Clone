@@ -36,10 +36,12 @@ public class Board : MonoBehaviour
 
     private bool _isCalc = false;
 
-    private int PopPuyoCnt = 0;
-    private int ChainBonus = 0;
-    private int ConnectBonus = 0;
-    private List<PuyoType> ColorBonus = new List<PuyoType>();
+    public int PopPuyoCnt = 0;
+    public int ChainBonus = 0;
+    public int ConnectBonus = 0;
+    public Dictionary<PuyoType, PuyoType> ColorBonus = new Dictionary<PuyoType, PuyoType>();
+    private int _score = 0;
+    public int Score => _score;
 
     public bool IsGameOver = false;
 
@@ -97,10 +99,35 @@ public class Board : MonoBehaviour
 
     public void FindSamePuyo()
     {
-        PuyoList.ForEach(puyo =>
+        int lastPopPuyoCnt = 0;
+        while(true)
         {
-            puyo.DFS(puyo);
-        });
+            lastPopPuyoCnt = PopPuyoCnt;
+            PuyoList.ForEach(puyo =>
+            {
+                puyo.DFS(puyo);
+            });
+            if (PopPuyoCnt > lastPopPuyoCnt)
+                ChainBonus++;
+            else 
+                break;
+        }
+
+        //연쇄 보너스 계산
+        if (ChainBonus == 1)
+        {
+            ChainBonus = 0;
+        }
+        else if (ChainBonus <= 3)
+        {
+            ChainBonus = (ChainBonus - 1) * 8;
+        }
+        else
+        {
+            ChainBonus = (ChainBonus - 3) * 32;
+        }
+
+        _score = PopPuyoCnt * (ChainBonus + ConnectBonus + ColorBonus.Count) * 10;
         //while (_isCalc)
         //{
         //    PuyoList.ForEach(puyo =>

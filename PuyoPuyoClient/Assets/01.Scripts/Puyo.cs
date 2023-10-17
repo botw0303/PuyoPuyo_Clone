@@ -143,7 +143,6 @@ public class Puyo
                 continue;
 
             DFS(GameManager.Instance.GetBoard(1).PuyoBoard[nx, ny]);
-            IsPop = true;
             Pop();
         }
     }
@@ -153,6 +152,9 @@ public class Puyo
         Visited = false;
         IsPop = false;
         _type = PuyoType.None;
+        GameManager.Instance.GetBoard(1).PopPuyoCnt++;
+        GameManager.Instance.GetBoard(1).ColorBonus.Add(_type, _type);
+        GameManager.Instance.GetBoard(1).ConnectBonus++;
         //GameManager.Instance.GetBoard(1).PopPuyoCnt++;
         //if (!(GameManager.Instance.GetBoard(1).ColorBonus.Contains(this._type)))
         //{
